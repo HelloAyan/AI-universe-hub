@@ -5,11 +5,11 @@ const loadAlUniverse = async () => {
     const hello = data.data.tools;
     console.log(hello);
     displayBlogs(data.data.tools);
+    displayFeature(data.data.tools);
 }
 
 const displayBlogs = blogs => {
     const blogContainer = document.getElementById('blogContainer');
-    const featureContainer = document.getElementById('featureDetails');
     blogs.forEach(blog => {
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('col')
@@ -56,8 +56,5 @@ const displayBlogs = blogs => {
     })
 }
 
-const displayFeature = features => {
-    const featureContainer = document.getElementById('')
-}
 
 loadAlUniverse();
