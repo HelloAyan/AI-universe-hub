@@ -45,7 +45,9 @@ const displayBlogs = blogs => {
                                 <div class="months">Contact us Enterprise</div>
                             </div>
                         </div>
-                        
+                        <div class="rightModal">
+                            <div> <img src=${blog.image} class="img-fluid"> </img> </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
