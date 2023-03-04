@@ -33,39 +33,17 @@
         <!-- See More Section Start -->
         <section class="m-5">
             <div class=" d-flex justify-content-center">
-                <button type="button" class="btn btn-danger text-center rounded-5"> See More</button>
+                <button id="showAll" type="button" class="btn btn-danger text-center rounded-5"> See More</button>
             </div>
         </section>
 
-        <section>
-            <!-- Modal Part Start -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modalBodyContainer">
-                            <div class="leftModal">
-                                <h5>${blog.description}</h5>
-                                <div class="subscriptionContainer">
-                                    <div class="months">$10/ <br />month Basic</div>
-                                    <div class="months">$50/ <br />month Basic</div>
-                                    <div class="months">Contact us Enterprise</div>
-                                </div>
-                            </div>
-                            <div class="rightModal">
-                                <div> <img src=${blog.image} class="img-fluid"> </img> </div>
-                                <h5 class="text-center m-2">Hi, how are you doing today?</h5>
-                                <div class="text-center m-2">I'm doing well, thank you for asking. How can I assist you
-                                    today?</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+        <!-- Spinner Part Start -->
+        <section id="loader" class="text-center mb-5 d-none">
+            <div class="spinner-border " style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </section>
     </main>

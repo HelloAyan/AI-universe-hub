@@ -6,11 +6,13 @@ const loadAlUniverse = async () => {
     console.log(hello);
     displayBlogs(data.data.tools);
     displayFeature(data.data.tools);
+    toggleSpinner(true);
 }
 
 const displayBlogs = blogs => {
     const blogContainer = document.getElementById('blogContainer');
     blogs = blogs.slice(0, 6);
+
     blogs.forEach(blog => {
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('col')
@@ -62,7 +64,10 @@ const displayBlogs = blogs => {
             </div>
         `
         blogContainer.appendChild(blogDiv);
+
     })
+
+
 }
 
 
