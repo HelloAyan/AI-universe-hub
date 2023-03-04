@@ -4,12 +4,12 @@ const loadAlUniverse = async () => {
     const data = await res.json();
     const hello = data.data.tools;
     console.log(hello);
-
     displayBlogs(data.data.tools);
 }
 
 const displayBlogs = blogs => {
     const blogContainer = document.getElementById('blogContainer');
+    const featureContainer = document.getElementById('featureDetails');
     blogs.forEach(blog => {
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('col')
@@ -18,10 +18,9 @@ const displayBlogs = blogs => {
                 <img src="${blog.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Features</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                <h5 class="card-title">${blog.name}</h5>
+                <p id="featureDetails" class="card-text"> 
+                   ${blog.features}
+                </p>
                 <p style="float:right;">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -52,9 +51,13 @@ const displayBlogs = blogs => {
                 <small class="text-muted">${blog.published_in}</small>
                 </div>
             </div>
-        `;
+        `
         blogContainer.appendChild(blogDiv);
     })
+}
+
+const displayFeature = features => {
+    const featureContainer = document.getElementById('')
 }
 
 loadAlUniverse();
