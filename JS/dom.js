@@ -47,6 +47,7 @@ const displayBlogs = blogs => {
                         </div>
                         <div class="rightModal">
                             <div> <img src=${blog.image} class="img-fluid"> </img> </div>
+                            <h5 class="text-center m-2">Hi, how are you doing today?</h5>
                         </div>
                     </div>
                     <div class="modal-footer">
